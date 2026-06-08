@@ -2568,10 +2568,190 @@ body {
 }
 
 
+
+/* Why Choose Section */
+.why-choose {
+  background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(65, 105, 225, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.why-choose::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: rgba(65, 105, 225, 0.08);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.why-choose-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.why-choose-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.why-choose-label {
+  display: inline-block;
+  color: #4169e1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.why-choose-header h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.why-choose-header h2 .highlight {
+  color: #4169e1;
+}
+
+.why-choose-header p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.why-choose-card {
+  background: linear-gradient(135deg, rgba(65, 105, 225, 0.1) 0%, rgba(65, 105, 225, 0.05) 100%);
+  border: 1px solid rgba(65, 105, 225, 0.3);
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-choose-card:hover {
+  background: linear-gradient(135deg, rgba(65, 105, 225, 0.15) 0%, rgba(65, 105, 225, 0.08) 100%);
+  border-color: rgba(65, 105, 225, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(65, 105, 225, 0.2);
+}
+
+.why-choose-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #4169e1 0%, #5b7ff5 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.why-choose-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.why-choose-badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(65, 105, 225, 0.15);
+  line-height: 1;
+}
+
+.why-choose-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.why-choose-card p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .why-choose-header h2 {
+    font-size: 36px;
+  }
+
+  .why-choose-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose {
+    padding: 60px 20px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .why-choose-header h2 {
+    font-size: 28px;
+  }
+
+  .why-choose-header p {
+    font-size: 14px;
+  }
+
+  .why-choose-card {
+    padding: 25px;
+  }
+
+  .why-choose-badge {
+    font-size: 32px;
+  }
+}
+
 /* Working Procedure Section */
 .working-procedure {
   padding: 80px 40px;
-  background: #f8f9fa;
+  background: white;
 }
 
 .procedure-container {
@@ -2599,76 +2779,86 @@ body {
 }
 
 .procedure-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .procedure-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 auto;
+  max-width: 250px;
 }
 
-.procedure-card:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transform: translateY(-10px);
+.procedure-image-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .procedure-image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #e3f0ff 0%, #d4e5ff 100%);
-}
-
-.procedure-image img {
-  width: 100%;
-  height: 100%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
   object-fit: cover;
+  border: 3px solid #f0f0f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.procedure-number {
+.procedure-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
   background: linear-gradient(135deg, #4169e1 0%, #5b7ff5 100%);
   color: white;
-  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
-  padding: 20px;
-  margin: 0;
+  font-size: 20px;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(65, 105, 225, 0.3);
 }
 
 .procedure-card h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #1a1a2e;
-  margin: 15px 0;
-  padding: 0 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .procedure-card p {
   font-size: 14px;
   color: #666;
-  padding: 0 20px 20px;
   line-height: 1.6;
 }
 
 .procedure-arrow {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #4169e1;
+  color: #e0e0e0;
   font-size: 24px;
+  margin-top: 30px;
+  flex: 0 0 auto;
 }
 
 .procedure-arrow svg {
-  width: 30px;
-  height: 30px;
-  stroke: #4169e1;
+  width: 40px;
+  height: 40px;
+  stroke: #e0e0e0;
+  stroke-width: 1.5;
 }
 
 @media (max-width: 1024px) {
@@ -2677,12 +2867,11 @@ body {
   }
 
   .procedure-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
   }
 
-  .procedure-arrow {
-    display: none;
+  .procedure-header h2 {
+    font-size: 32px;
   }
 }
 
@@ -2692,14 +2881,185 @@ body {
   }
 
   .procedure-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .procedure-arrow {
+    display: none;
   }
 
   .procedure-header h2 {
+    font-size: 24px;
+  }
+
+  .procedure-card {
+    max-width: 100%;
+  }
+}
+
+
+/* Why Choose Section */
+.why-choose {
+  background: linear-gradient(135deg, #1a2a4e 0%, #0f1929 100%);
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: rgba(65, 105, 225, 0.05);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.why-choose::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: rgba(65, 105, 225, 0.03);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.why-choose-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.why-choose-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.why-choose-label {
+  display: inline-block;
+  color: #4169e1;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.why-choose-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.why-choose-header h2 .highlight {
+  color: #4169e1;
+}
+
+.why-choose-header p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.why-choose-card {
+  background: linear-gradient(135deg, rgba(65, 105, 225, 0.15) 0%, rgba(91, 127, 245, 0.08) 100%);
+  border: 1px solid rgba(65, 105, 225, 0.2);
+  border-radius: 12px;
+  padding: 35px 25px;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-choose-card:hover {
+  border-color: rgba(65, 105, 225, 0.5);
+  background: linear-gradient(135deg, rgba(65, 105, 225, 0.25) 0%, rgba(91, 127, 245, 0.15) 100%);
+  transform: translateY(-5px);
+}
+
+.why-choose-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #4169e1 0%, #5b7ff5 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.why-choose-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.why-choose-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(65, 105, 225, 0.6);
+  letter-spacing: 1px;
+}
+
+.why-choose-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.why-choose-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .why-choose-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose {
+    padding: 60px 20px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .why-choose-header h2 {
     font-size: 28px;
   }
 
-  .procedure-card h3 {
-    font-size: 18px;
+  .why-choose-card {
+    padding: 25px 20px;
   }
 }

@@ -2,9 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import graLogo from './assets/logo.png'
 import heroImg1 from './assets/hero_Section1.webp'
 import heroImg2 from './assets/hero_Section2.webp'
-import serviceImg1 from './assets/Services/Q-icon-1.png.webp'
 import serviceImg2 from './assets/Services/digital-marketing-300x223.png.webp'
-import serviceImg3 from './assets/Services/Website-Development-300x223.png.webp'
 import aboutImg from './assets/About_Section1.webp'
 import team1 from './assets/Team/1 (2).jpg'
 import team2 from './assets/Team/2.jpg'
@@ -63,17 +61,7 @@ function App() {
     setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length)
   }
 
-  const scrollServicesLeft = () => {
-    if (servicesScrollRef.current) {
-      servicesScrollRef.current.scrollBy({ left: -300, behavior: 'smooth' })
-    }
-  }
 
-  const scrollServicesRight = () => {
-    if (servicesScrollRef.current) {
-      servicesScrollRef.current.scrollBy({ left: 300, behavior: 'smooth' })
-    }
-  }
 
   return (
     <>
@@ -601,22 +589,83 @@ function App() {
         </div>
       </section>
 
+      {/* Why Choose Section */}
+      <section className="why-choose">
+        <div className="why-choose-container">
+          <div className="why-choose-header">
+            <span className="why-choose-label">EXCELLENCE</span>
+            <h2>Why Choose <span className="highlight">Gratech</span>?</h2>
+            <p>We combine technical excellence with business acumen to deliver solutions that drive real results</p>
+          </div>
+
+          <div className="why-choose-grid">
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                  <polyline points="13 2 13 9 20 9"></polyline>
+                </svg>
+              </div>
+              <div className="why-choose-badge">01</div>
+              <h3>Rapid Deployment</h3>
+              <p>Launch your product faster with our agile development methodology and streamlined workflows.</p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div className="why-choose-badge">02</div>
+              <h3>Security-First Mindset</h3>
+              <p>Enterprise-grade security measures to protect your data and ensure compliance at every layer.</p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="12" r="1"></circle>
+                  <circle cx="19" cy="12" r="1"></circle>
+                  <circle cx="5" cy="12" r="1"></circle>
+                </svg>
+              </div>
+              <div className="why-choose-badge">03</div>
+              <h3>Scalable Architecture</h3>
+              <p>Built to grow with your business. Our solutions scale seamlessly from startup to enterprise.</p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <div className="why-choose-badge">04</div>
+              <h3>24/7 Support</h3>
+              <p>Round-the-clock technical support and maintenance to keep your systems running smoothly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Working Procedure Section */}
       <section className="working-procedure">
         <div className="procedure-container">
           <div className="procedure-header">
-            <span className="procedure-label">🔵 WORKING PROCEDURE</span>
-            <h2>How We Work</h2>
+            <span className="procedure-label">🔵 WORK PROCESS</span>
+            <h2>Our Development Process</h2>
           </div>
 
           <div className="procedure-grid">
             <div className="procedure-card">
-              <div className="procedure-image">
-                <img src={workProcess1} alt="Requirements" />
+              <div className="procedure-image-wrapper">
+                <img src={workProcess1} alt="Define Requirements" className="procedure-image" />
+                <div className="procedure-badge">1</div>
               </div>
-              <div className="procedure-number">1</div>
-              <h3>Requirements</h3>
-              <p>We understand your business needs and project requirements in detail.</p>
+              <h3>Define Requirements</h3>
+              <p>In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur</p>
             </div>
 
             <div className="procedure-arrow">
@@ -626,12 +675,12 @@ function App() {
             </div>
 
             <div className="procedure-card">
-              <div className="procedure-image">
-                <img src={workProcess2} alt="Design & Planning" />
+              <div className="procedure-image-wrapper">
+                <img src={workProcess2} alt="Design & Prototyping" className="procedure-image" />
+                <div className="procedure-badge">2</div>
               </div>
-              <div className="procedure-number">2</div>
-              <h3>Design & Planning</h3>
-              <p>We create detailed designs and planning documents for your project.</p>
+              <h3>Design & Prototyping</h3>
+              <p>In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur</p>
             </div>
 
             <div className="procedure-arrow">
@@ -641,12 +690,69 @@ function App() {
             </div>
 
             <div className="procedure-card">
-              <div className="procedure-image">
-                <img src={workProcess3} alt="Execution" />
+              <div className="procedure-image-wrapper">
+                <img src={workProcess3} alt="Final Solution" className="procedure-image" />
+                <div className="procedure-badge">3</div>
               </div>
-              <div className="procedure-number">3</div>
-              <h3>Execution</h3>
-              <p>Our expert team executes the plan with quality and precision.</p>
+              <h3>Final Solution</h3>
+              <p>In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Gratech Section */}
+      <section className="why-choose">
+        <div className="why-choose-container">
+          <div className="why-choose-header">
+            <span className="why-choose-label">EXCELLENCE</span>
+            <h2>Why Choose <span className="highlight">Gratech</span>?</h2>
+            <p>We combine technical excellence with business acumen to deliver solutions that drive real results</p>
+          </div>
+
+          <div className="why-choose-grid">
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div className="why-choose-number">01</div>
+              <h3>Rapid Deployment</h3>
+              <p>Launch your product faster with our agile development methodology and streamlined workflows.</p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.72-7 8.77V12H5V6.3l7-3.11v8.8z"/>
+                </svg>
+              </div>
+              <div className="why-choose-number">02</div>
+              <h3>Security-First Mindset</h3>
+              <p>Enterprise-grade security measures to protect your data and ensure compliance at every layer.</p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <div className="why-choose-number">03</div>
+              <h3>Scalable Architecture</h3>
+              <p>Built to grow with your business. Our solutions scale seamlessly from startup to enterprise.</p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+              </div>
+              <div className="why-choose-number">04</div>
+              <h3>24/7 Support</h3>
+              <p>Round-the-clock technical support and maintenance to keep your systems running smoothly.</p>
             </div>
           </div>
         </div>
