@@ -611,6 +611,9 @@ function App() {
 
           <div className="procedure-grid">
             <div className="procedure-card">
+              <div className="procedure-image">
+                <img src={workProcess1} alt="Requirements" />
+              </div>
               <div className="procedure-number">1</div>
               <h3>Requirements</h3>
               <p>We understand your business needs and project requirements in detail.</p>
@@ -623,6 +626,9 @@ function App() {
             </div>
 
             <div className="procedure-card">
+              <div className="procedure-image">
+                <img src={workProcess2} alt="Design & Planning" />
+              </div>
               <div className="procedure-number">2</div>
               <h3>Design & Planning</h3>
               <p>We create detailed designs and planning documents for your project.</p>
@@ -635,6 +641,9 @@ function App() {
             </div>
 
             <div className="procedure-card">
+              <div className="procedure-image">
+                <img src={workProcess3} alt="Execution" />
+              </div>
               <div className="procedure-number">3</div>
               <h3>Execution</h3>
               <p>Our expert team executes the plan with quality and precision.</p>

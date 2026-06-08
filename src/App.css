@@ -2566,3 +2566,140 @@ body {
     font-size: 28px;
   }
 }
+
+
+/* Working Procedure Section */
+.working-procedure {
+  padding: 80px 40px;
+  background: #f8f9fa;
+}
+
+.procedure-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.procedure-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.procedure-label {
+  color: #4169e1;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.procedure-header h2 {
+  font-size: 42px;
+  color: #1a1a2e;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.procedure-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.procedure-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.procedure-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}
+
+.procedure-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e3f0ff 0%, #d4e5ff 100%);
+}
+
+.procedure-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.procedure-number {
+  background: linear-gradient(135deg, #4169e1 0%, #5b7ff5 100%);
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 20px;
+  margin: 0;
+}
+
+.procedure-card h3 {
+  font-size: 20px;
+  color: #1a1a2e;
+  margin: 15px 0;
+  padding: 0 20px;
+}
+
+.procedure-card p {
+  font-size: 14px;
+  color: #666;
+  padding: 0 20px 20px;
+  line-height: 1.6;
+}
+
+.procedure-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4169e1;
+  font-size: 24px;
+}
+
+.procedure-arrow svg {
+  width: 30px;
+  height: 30px;
+  stroke: #4169e1;
+}
+
+@media (max-width: 1024px) {
+  .working-procedure {
+    padding: 60px 30px;
+  }
+
+  .procedure-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .procedure-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .working-procedure {
+    padding: 40px 20px;
+  }
+
+  .procedure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .procedure-header h2 {
+    font-size: 28px;
+  }
+
+  .procedure-card h3 {
+    font-size: 18px;
+  }
+}
