@@ -111,8 +111,8 @@ function App() {
       <header className="header">
         <div className="header-content">
           <div className="logo">
-            <img src={graLogo} alt="Gratech Logo" className="logo-image" />
-            <span>Gratech</span>
+            <img src={graLogo} alt="ClickForGrow Logo" className="logo-image" />
+            <span>ClickForGrow</span>
           </div>
           <nav className="nav">
             <a href="#home">Home</a>
@@ -266,7 +266,7 @@ function App() {
         <div className="about-wrapper">
           <div className="about-left">
             <div className="about-image-container">
-              <img src={aboutImg} alt="About Gratech" className="about-main-img" />
+              <img src={aboutImg} alt="About ClickForGrow" className="about-main-img" />
               <div className="about-circle"></div>
               <div className="about-video-box">
                 <img src={heroImg2} alt="Video" className="about-video-img" />
@@ -280,7 +280,7 @@ function App() {
           </div>
 
           <div className="about-right">
-            <span className="about-tag">🔵 ABOUT GRATECH</span>
+            <span className="about-tag">🔵 ABOUT CLICKFORGROW</span>
             <h2 className="about-heading">We Strive To Offer Intelligent Business Solutions</h2>
             
             <p className="about-text">
@@ -626,7 +626,7 @@ function App() {
         <div className="why-choose-container">
           <div className="why-choose-header">
             <span className="why-choose-label">EXCELLENCE</span>
-            <h2>Why Choose <span className="highlight">Gratech</span>?</h2>
+            <h2>Why Choose <span className="highlight">ClickForGrow</span>?</h2>
             <p>We combine technical excellence with business acumen to deliver solutions that drive real results</p>
           </div>
 
@@ -733,12 +733,12 @@ function App() {
         </div>
       </section>
 
-      {/* Why Choose Gratech Section */}
+      {/* Why Choose ClickForGrow Section */}
       <section className="why-choose">
         <div className="why-choose-container">
           <div className="why-choose-header">
             <span className="why-choose-label">EXCELLENCE</span>
-            <h2>Why Choose <span className="highlight">Gratech</span>?</h2>
+            <h2>Why Choose <span className="highlight">ClickForGrow</span>?</h2>
             <p>We combine technical excellence with business acumen to deliver solutions that drive real results</p>
           </div>
 
@@ -796,7 +796,7 @@ function App() {
           <div className="review-header">
             <span className="review-label">🔵 CLIENT'S REVIEW</span>
             <h2>What Our Clients Say</h2>
-            <p>Hear from our satisfied customers about their experience with Gratech</p>
+            <p>Hear from our satisfied customers about their experience with ClickForGrow</p>
           </div>
 
           <div className="review-content">
@@ -843,8 +843,8 @@ function App() {
           <div className="footer-container">
             <div className="footer-section footer-logo-section">
               <div className="footer-logo">
-                <img src={graLogo} alt="Gratech" className="footer-logo-img" />
-                <span>Gratech</span>
+                <img src={graLogo} alt="ClickForGrow" className="footer-logo-img" />
+                <span>ClickForGrow</span>
               </div>
               <p className="footer-description">Phasellus ultricies aliquam volutpat ullamcorper laoreet naque, a lacinia curabitur lacinia mollis</p>
               <div className="footer-social">
@@ -869,7 +869,7 @@ function App() {
             <div className="footer-section">
               <h4>Quick Link</h4>
               <ul className="footer-links">
-                <li><a href="#"><span className="arrow">»</span> About Gratech</a></li>
+                <li><a href="#"><span className="arrow">»</span> About ClickForGrow</a></li>
                 <li><a href="#"><span className="arrow">»</span> Our Services</a></li>
                 <li><a href="#"><span className="arrow">»</span> Pricing Plan</a></li>
                 <li><a href="#"><span className="arrow">»</span> Our Projects</a></li>
@@ -901,7 +901,7 @@ function App() {
 
         <div className="footer-bottom">
           <div className="footer-container">
-            <p className="footer-copyright">© All Copyright 2024 by Gratech</p>
+            <p className="footer-copyright">© All Copyright 2024 by ClickForGrow</p>
             <div className="footer-bottom-links">
               <a href="#">Terms & Condition</a>
               <a href="#">Privacy Policy</a>
@@ -919,3 +919,4 @@ function App() {
 }
 
 export default App
+
